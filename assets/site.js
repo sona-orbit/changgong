@@ -1,8 +1,12 @@
 const THEMES = [
   { id: 'daily', title: '每天整理', hint: '早上三分鐘清完', subs: [
     { id: 'cards', label: '早報：一張卡一件事', headline: '一張卡一件事，\n滑完就清空。', body: '誰在等你回、哪個群組定了什麼、今天要交什麼。回覆他先擬好，你看一眼按下去就送；還沒想好就延後到晚報。' },
-    { id: 'done', label: '清完的那一刻', headline: '清完了，\n你也知道清了什麼。', body: '最後一張處理完，他告訴你這次花了幾分鐘、回了誰、延後了什麼。昨晚他替你回了幾則，也一起交代。' },
-    { id: 'insights', label: '你的 LINE 一週長什麼樣', headline: '看見自己\n被訊息追著跑的樣子。', body: '一週收到多少、你平均多久回、誰最常找你、哪些人已經很久沒聯絡。數字不是要你焦慮，是讓你決定要把時間給誰。' } ] },
+    { id: 'done', label: '清完的那一刻', headline: '清完了，\n你也知道清了什麼。', body: '最後一張處理完，他告訴你這次花了幾分鐘、回了誰、延後了什麼。昨晚他替你回了幾則，也一起交代。' } ] },
+  { id: 'insight', title: '看懂你的 LINE', hint: '訊息量、誰在找你', subs: [
+    { id: 'weekly', label: '一週總覽', headline: '這一週，\n你的 LINE 長這樣。', body: '收到多少、你送出多少、平均多久回，每一項都跟上週比。數字不是要你焦慮，是讓你知道時間花到哪裡去了。' },
+    { id: 'heatmap', label: '什麼時候最忙', headline: '原來週四晚上，\n最多人找你。', body: '一週七天、一天二十四小時，哪一格最滿一眼就看得到。最常找你的人也排出來，下次排行程、留空檔，心裡有個底。' },
+    { id: 'helped', label: '長工替你做了多少', headline: '這一週，\n他替你省下兩個多小時。', body: '代回幾則、擬了幾則草稿、你在線上時他讓開幾次、替你記下幾個待辦，全部攤開給你看。省下的時間怎麼算，也寫得清清楚楚。' },
+    { id: 'relations', label: '有點冷掉的關係', headline: '好久沒聊的人，\n他會記得提醒你。', body: '以前常聊、最近安靜了的人，還有傳了訊息在等你回的人，他都幫你列出來。點一下打開對話，或請他先擬一句問候，你看過再送。' } ] },
   { id: 'perchat', title: '每個對話自己的規矩', hint: '媽媽和客戶不一樣', subs: [
     { id: 'mode', label: '誰自動回、誰先給你看', headline: '媽媽可以直接回，\n客戶先給你看。', body: '每個人、每個群組都能單獨決定：自動回、先擬草稿給你、被標註才回，或乾脆不管。再替每個人寫一段工作筆記，他回話會照著做。' },
     { id: 'takeover', label: '你開口後，他讓開多久', headline: '你一開口，\n他就退到旁邊。', body: '你在線上，他不搶話。讓開多久每個對話可以不一樣：家人十分鐘、工作群一小時。你走開了，他才接手。' },
@@ -24,7 +28,10 @@ const THEMES = [
 const SCREEN = {
   cards: { time: '08:01', tab: 0, caption: '總覽・早報卡片' },
   done: { time: '08:04', tab: 0, caption: '總覽・清完的收尾頁' },
-  insights: { time: '21:30', tab: 0, caption: '總覽・一週洞察' },
+  weekly: { time: '21:30', tab: 0, caption: '總覽・一週總覽' },
+  heatmap: { time: '21:31', tab: 0, caption: '總覽・什麼時候最忙' },
+  helped: { time: '21:33', tab: 0, caption: '總覽・長工替你做了多少' },
+  relations: { time: '21:35', tab: 0, caption: '總覽・有點冷掉的關係' },
   mode: { time: '10:12', tab: 1, caption: '對話・對象設定' },
   takeover: { time: '14:06', tab: 1, caption: '對話・你開口後他讓開' },
   signature: { time: '19:33', tab: 1, caption: '對話・代回標記' },
